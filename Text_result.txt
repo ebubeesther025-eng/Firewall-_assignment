@@ -1,0 +1,26 @@
+# Test Results for Firewall Assignment
+
+## SSH Connection Test (Port 22)
+Command:
+ssh user@your-server-ip
+Result:
+Connection successful
+
+## Blocked Port Test (Port 80)
+Command:
+nc -zv your-server-ip 80
+Result:
+Connection refused (port blocked as expected)
+
+## Outgoing Traffic Test (Ping)
+Command:
+ping -c 4 google.com
+Result:
+PING google.com (142.250.190.14): 56 data bytes
+64 bytes from 142.250.190.14: icmp_seq=0 ttl=115 time=23.4 ms
+64 bytes from 142.250.190.14: icmp_seq=1 ttl=115 time=22.9 ms
+64 bytes from 142.250.190.14: icmp_seq=2 ttl=115 time=23.1 ms
+64 bytes from 142.250.190.14: icmp_seq=3 ttl=115 time=23.0 ms
+
+--- google.com ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss
