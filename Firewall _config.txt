@@ -1,0 +1,17 @@
+# Firewall configuration for assignment
+# Using UFW (Uncomplicated Firewall) on Linux
+
+# Enable firewall
+sudo ufw enable
+
+# Allow SSH (port 22) so you can connect remotely
+sudo ufw allow 22/tcp
+
+# Deny all other incoming traffic
+sudo ufw default deny incoming
+
+# Allow all outgoing traffic
+sudo ufw default allow outgoing
+
+# Show firewall status with numbered rules
+sudo ufw status numbered
